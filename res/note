@@ -1,0 +1,123 @@
+Ajax
+1. ajax: 异步的js和xml
+        作用： 
+        - 实现动静分离（前后台分离）
+		- 实现局部页面的刷新
+	
+2. 案例
+		- 注册账号，自动提示用户名是否可用
+		- 异步加载页面，加载商品分类模块
+
+3. 语法：
+	ajax来源于Javascript，但是代码比较繁琐，开发中一般会使用jQuery封装过的ajax来实现
+	- $(selector).load(url, data);
+	- $.post(
+		url, //请求地址
+		data, //发送的数据，可有可无，必须是js对象-json格式
+		function(data){ //回调函数，data形参接受数据
+		},
+		'json' //接受数据格式
+	);
+
+4. 注册账号，自动提示用户名是否可用
+  1）导入jQuery类库
+  2） 在jsp文件中，加载类库
+  3) 给账号输入框绑定change事件
+  4) 当chang事件触发的时候，需要给后台发送ajax请求，把账号传过去后台程序
+  5) 后台程序调用service->dao，判断用户名是否可用
+  6) 后台程序向前台返回校验结果
+
+5. 异步加载页面，加载商品分类模块
+
+
+
+
+--------------------------
+JSON
+
+1. 概念
+   json- javascript object natotion
+         它是目前互联网络交互数据的格式标准
+      - xml、properties，以前也是作为数据交互的格式，但是现在仅仅作为配置文件格式
+      - 交互格式统一为JSON
+
+2. 格式
+   - JSONObject(json对象)
+      {
+         name: value,
+         name: value
+      }
+      //比如学生，学生姓名叫小张，年龄22
+      {
+      	 'name': '小张',
+      	 'age':22
+      }
+     
+                        属性名称：字符串
+                        属性值：  字符串、数字、 布尔、null、json对象/数组             
+      
+   
+   - JSONArray(json数组)
+      []
+      json数组的类型：字符串、数字、 布尔、null、json对象/数组      
+      
+
+3. 在线工具
+   - http://www.bejson.com/
+
+4. gson
+   - google推出的处理json的开源库
+   - json的开源库： fastJson(阿里巴巴)、jackson(ssm框架内置的)
+
+
+------------------------------------------------
+开发中，目前有两种模式
+1. 传统
+   Servlet + JSP
+           数据交互使用域对象
+           
+2. 前后台分离(springboot + vue)
+   ajax + json
+         前台一般使用前端框架：vue、angular、react
+         后台一般使用框架：SSM（spring、spring mvc、mybatis） -> springboot           
+                       还有很多需要学习： 架构师（分布式、微服务、消息中间件等）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
