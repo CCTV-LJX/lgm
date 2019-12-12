@@ -3,7 +3,7 @@ package com.bodhixu.web;
 /**
  * 商品分类
  * 
- * @author 丰哥
+ * @author liuge
  * 2019年9月25日
  *
  */
